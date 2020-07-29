@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> 국토발전전시관 </title>
+        
+        <style>
+            *{padding: 0; margin: 0;}
+            
+            li{
+                list-style: none;
+            }
+            
+            a{
+                text-decoration: none;
+            }
+            
+            img{
+                display: block;
+            }
+            
+            body{
+                font-size: 14px;
+                line-height: 26px;
+                color: #434343;
+                font-family: '맑은 고딕', 'Arial'
+            }
+            
+            /* 상단 */
+            header{
+                width: 100%;
+                height: 90px;
+                overflow: hidden;
+                background-color: #1e172a;
+            }
+            
+            #top{
+                width: 1200px;
+                height: 90px;
+                margin: 0 auto;
+                overflow: hidden;
+                text-align: center;
+            }
+            
+            #top .logo{
+                width: 120px;
+                height: 60px;
+                display:block;
+                float:left;
+                margin-top: 15px;
+                background-image: url(img1.jpg);
+                background-size: 100%;
+                font-size: 0px; 
+            }
+            
+            #top ul{
+                display:inline-block;
+                overflow: hidden;
+                margin-top: 30px;
+            }
+            
+            #top ul>li{
+                float:left;
+                line-height: 30px;
+            }
+            
+            #top ul>li>a{
+                color: beige;
+                font-size: 20px;
+                font-weight: 600;
+                display: block;
+                padding: 0px 30px;
+            }
+            
+            #top ul>li>a:hover{
+                color: coral;
+            }
+            
+            #top select{
+                float:right;
+                display:block;
+                height: 30px;
+                padding: 0px 10px;
+                margin-top: 30px;
+                box-sizing: border-box;
+            }
+            
+            #main{
+                width: 100%;
+                overflow: hidden;
+                background-image: url(img2.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+            }
+            
+            #main h1{
+                width: 390px;
+                overflow: hidden;
+                margin: 80px auto;
+            }
+            
+            #main div{
+                width: 960px;
+                overflow: hidden;
+                margin: 0 auto;
+                margin-bottom: 60px;
+            }
+            
+            #main div>a{
+                float:left;
+                width:160px;
+                height: 80px;
+                background-color: rgba(79,150,222,0.7);
+                padding: 30px 0px;
+                display:block;
+                position: relative;
+                overflow: hidden;
+                background-size: 
+            }
+            
+            #main div>a>img{
+                width:80px;
+                height:60px;
+                margin: 0 auto;
+            }
+            #main div>a>span{
+                position:absolute;
+                bottom: 20px;
+                text-align: center;
+                display: block;
+                width: 100%;
+                color: #c7c7c7;
+            }
+            
+            #main div>a:first-child{
+                background-color: rgba(255,127,80,0.7)
+            }
+            
+            #main div>a:last-child{
+                background-color: rgba(116,214,165,0.7)
+            }
+            
+            #main div>a:hover span{
+                color:#fff;
+                font-weight: 900;
+            }
+            
+            #contents{
+                width:1140px;
+                overflow: hidden;
+                margin: 40px auto;
+                
+            }
+            
+            #contents .box{
+                width:360px;
+                margin-right: 10px;
+                margin-left: 10px;
+                margin-bottom: 20px;
+                float: left;
+                background-color: aquamarine;
+                text-align: center;
+                line-height: 200px;
+                overflow: hidden;
+                font-size: 20px;
+            }
+            
+            footer{
+                width:100%;
+                height: 90px;
+                background-color: #333;
+                overflow: hidden;
+            }
+            
+            footer div{
+                width: 1200px;
+                height: 90px;
+                margin: 0 auto;
+            }
+            
+            footer>div>img{
+                float:left;
+                margin-top: 35px;
+            }
+            
+            footer>div>p{
+                float:left;
+                line-height: 24px;
+                margin-top: 24px;
+                margin-left: 32px;
+                color: #b9b9b9;
+            }
+            
+            footer p>a{
+                color: #b9b9b9;
+                margin-left: 20px;
+            }
+            
+            
+            footer p>span{
+                color:#69696b;
+                font-size: 11px;
+            }
+            
+            footer div>.right{
+                float:right;
+                margin-top: -50px;
+                
+            }
+            
+            footer div>.right>img{
+                float:left;
+            }
+            
+            footer div>.right>select{
+                display: block;
+                float:left;
+                height: 40px;
+                background-color: #242426;
+                color: #fff;
+                padding-left: 10px;
+                padding-right: 30px;
+                
+            }
+            
+            @media screen and (max-width:960px){
+                #top{
+                    width:100%;
+                    transition-duration: 0.7s;
+                }
+                
+                #top>.logo{
+                    margin: 0 auto;
+                    float:none;
+                    margin-top: 15px;
+                }
+                
+                #top ul{
+                    display: none;
+                }
+                #top select{
+                    display: none;
+                }
+                
+                #main div{
+                    width:50.52%;
+                    transition-duration: 0.7s;
+                }
+                
+                #main div>a{
+                    float:left;
+                    width: 33.33%;
+                }
+                
+                #contents{
+                    width: 85%;
+                    transition-duration: 0.7s;
+                }
+                
+                #contents .box{
+                    width:48%;
+                    margin: 0;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                    margin-bottom: 1%;
+                }
+                
+                footer>div{
+                    width: 100%;
+                    text-align: center;
+                    transition-duration: 0.7s
+                }
+                
+                footer>div>img{
+                    display: none;
+                }
+                
+                footer>div>p{
+                    float: none;
+                }
+                
+                footer>div>.right{
+                    display:none;
+                }
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <div id="top">
+          <a href="#" class="logo">국토발전전시관</a>
+          <ul>
+              <li><a href="#">관람</a></li>  
+              <li><a href="#">전시</a></li>  
+              <li><a href="#">교육</a></li>  
+              <li><a href="#">체험</a></li>  
+              <li><a href="#">소식</a></li>  
+              <li><a href="#">참여</a></li>  
+              <li><a href="#">전시관 소개</a></li>  
+          </ul>    
+            
+            <select>
+                <option>Language</option>
+                <option>ENGLISH</option>
+                <option>KOREA</option>
+            </select>
+            </div>
+        </header>
+        
+        <!--메인이미지-->
+        <div id="main">
+            <h1><img src="img2.png" alt="메인 타이틀"></h1>
+            
+            <div>
+                <a href="#"><img src="img3.jpg" alt=""><span>위치/교통편</span></a>
+                <a href="#"><img src="img1.jpg" alt=""><span>층층별안내</span></a>
+                <a href="#"><img src="img3.jpg" alt=""><span>편의시설</span></a>
+                <a href="#"><img src="img1.jpg" alt=""><span>단체관람</span></a>
+                <a href="#"><img src="img3.jpg" alt=""><span>장애인관람</span></a>
+                <a href="#"><img src="img1.jpg" alt=""><span>문의하기</span></a>
+            </div>
+        </div>
+        
+        <!--박스부분-->
+        <div id="contents">
+            <div class="box">box</div>
+            <div class="box">box</div>
+            <div class="box">box</div>
+            <div class="box">box</div>
+            <div class="box">box</div>
+            <div class="box">box</div>
+        </div>
+        
+        
+        <footer>
+            <div>
+                <img src="img1.jpg" alt="하단" width="50" height="50" />
+                <p>
+                어쩌궁ㄻㄴㅇㄹㄷㅁㄴㅇ123123
+                <span>Copyright dfsadfae</span>
+                </p>
+                
+                <div class="right">
+                <img src="img2.png" alt="F" width="30" height="30">
+                <img src="img1.jpg" alt="b" width="30" height="30">    
+                <select>
+                    <option>관련사이트1</option>
+                    <option>관련사이트2</option>
+                </select>    
+                </div>
+                
+            </div>
+        </footer>
+        
+        
+        
+        
+        
+        
+    </body>
+</html>
